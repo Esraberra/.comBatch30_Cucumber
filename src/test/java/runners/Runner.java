@@ -5,12 +5,14 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
+
 @CucumberOptions (
     features="src/test/resources/features",
-    glue="stepdefinitions",
-    tags="@background"  ,
+    glue="stepdefinitions" ,
+    tags="@CH"  ,
 
-    dryRun= false
+    dryRun= true
+
         // dryRun=true dedigimizde testi calistirmadan bize eksik adimi verir
 
         // dryRun=false yaparsak testi calistirir, eksik bir adimla karsilasirsa

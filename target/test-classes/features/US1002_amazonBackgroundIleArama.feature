@@ -10,7 +10,7 @@ Feature: US1002 amazon background ile arama
     Then sonucun nutella icerdigini test eder
     And sayfayi kapatir
 
-
+@wip
   Scenario: TC02 amazon java arama
     And java icin arama yapar
     Then sonucun java icerdigini test eder
