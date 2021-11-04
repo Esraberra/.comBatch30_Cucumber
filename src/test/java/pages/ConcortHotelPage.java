@@ -12,21 +12,19 @@ public class ConcortHotelPage {
     }
 
 
+    @FindBy(xpath = "//a[text()='Log in']")
+    public WebElement loginLinki;
+
     @FindBy(xpath="//input[@name='UserName']")
-    public WebElement username;
+    public WebElement usernameKutusu;
 
     @FindBy(xpath="//input[@name='Password']")
-    public WebElement password;
-
-    @FindBy (xpath = "//li[contains( @id, 'Log')]")
-    public WebElement loginLink;
-
-    @FindBy (xpath = "//*[.='Try again please']")
-    public WebElement isLoginFailed;
+    public WebElement passwordKutusu;
 
     @FindBy (xpath = "//input[@id='btnSubmit']")
-    public WebElement enterButonu;
+    public WebElement loginButonu;
 
-
+    @FindBy(xpath="//span[text()='Try again please']")
+    public WebElement girisYapilamadiYazisiElementi;
 
 }

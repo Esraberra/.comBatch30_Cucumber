@@ -15,39 +15,31 @@ public class ConcortHotelStepDefinition {
 
     ConcortHotelPage qaPage=new ConcortHotelPage();
 
-    @Then("CH Log in linkine tiklar")
-    public void ch_log_in_linkine_tiklar() {
+
+
+    @Then("CH login linkine tiklar")
+    public void ch_login_linkine_tiklar() {
+       qaPage.loginLinki.click();
+    }
+    @Then("CH username kutusuna {string} yazar")
+    public void ch_username_kutusuna_yazar(String kullaniciAdi) {
+        qaPage.usernameKutusu.sendKeys(kullaniciAdi);
 
     }
-    @Then("CH username kutusuna {string} girer")
-    public void ch_username_kutusuna_girer(String string) {
-
+    @Then("CH password kutusuna {string} yazar")
+    public void ch_password_kutusuna_yazar(String sifre) {
+        qaPage.passwordKutusu.sendKeys(sifre);
     }
-    @Then("CH password kutusuna {string} girer")
-    public void ch_password_kutusuna_girer(String string) {
-
-    }
-    @Then("CH Login butonuna basar")
+    @Then("CH login butonuna basar")
     public void ch_login_butonuna_basar() {
-
+        qaPage.loginButonu.click();
     }
     @Then("giris yapilamadigini test eder")
     public void giris_yapilamadigini_test_eder() {
+        Assert.assertTrue(qaPage.girisYapilamadiYazisiElementi.isDisplayed());
+
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
