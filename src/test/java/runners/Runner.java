@@ -5,14 +5,19 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-
+//"json:target/json-reports/cucumber.json"
+//html:target\cucumber-reports
 @CucumberOptions (
-        plugin={"html:target\\cucumber-reports.html"},
+
+        plugin={"html:target/cucumber/reports",
+                "json:target/cucumber-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},
+
     features="src/test/resources/features",
     glue="stepdefinitions" ,
-    tags="@CH"  ,
+    tags=" @editor"  ,
 
-    dryRun= true
+    dryRun= false
 
         // dryRun=true dedigimizde testi calistirmadan bize eksik adimi verir
 
@@ -21,6 +26,7 @@ import org.junit.runner.RunWith;
         // test failed olur ve bize eksik adimi raporlar
 
 )
+
 
 
 public class Runner {

@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.EditorPage;
@@ -76,8 +77,12 @@ Actions actions=new Actions(Driver.getDriver());
     }
 
     @Then("{string} ve {string} girerek kaydin tamamlandigini test eder")
-    public void veGirerekKaydinTamamlandiginiTestEder(String firstname, String lastname) {
+    public void veGirerekKaydinTamamlandiginiTestEder(String firstname, String lastname) throws InterruptedException {
 
+        Thread.sleep(2000);
+        editorPage.searchKutusu.click();
+        editorPage.searchKutusu.sendKeys(firstname + "     " + lastname + "dfdfdd");
+        Assert.assertTrue(editorPage.isimAramaIlkSatir.isDisplayed());
 
     }
 }

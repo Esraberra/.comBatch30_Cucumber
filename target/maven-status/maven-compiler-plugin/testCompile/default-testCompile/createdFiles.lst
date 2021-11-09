@@ -1,0 +1,12 @@
+stepdefinitions/Hooks.class
+stepdefinitions/amazonStepDefinitions.class
+stepdefinitions/ConcortHotelStepDefinition.class
+pages/EditorPage.class
+runners/ParalelTestRunner1.class
+stepdefinitions/EditorStepDefinition.class
+utilities/Driver.class
+runners/ParalelTestRunner2.class
+pages/ConcortHotelPage.class
+runners/Runner.class
+utilities/ConfigReader.class
+pages/AmazonPage.class

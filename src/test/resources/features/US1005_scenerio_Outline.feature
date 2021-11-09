@@ -1,3 +1,4 @@
+@Paralel3
 Feature: US1005 amazonda liste ile ara
   Scenario Outline: TC09 amazonda verilen bir listeyi aratip, var olduklarini test ediniz
     Given kullanici "amazonUrl" sayfasina gider
