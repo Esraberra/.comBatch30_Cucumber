@@ -53,11 +53,17 @@ public class GMIBankPage {
     @FindBy (xpath = "//input[@name='firstName']")
     public WebElement firstNameWebElementi;
 
+    @FindBy(xpath = "//span[.= 'User Info']")
+    public  WebElement userInfo;
+
     @FindBy (xpath = "//select[@name='country.id']")
     public WebElement countryDropdown;
 
     @FindBy (xpath = "//select[@name='user.id']")
     public WebElement userDropdown;
+
+    @FindBy(xpath = "//select[@id='langKey']")
+    public WebElement dilDropDown;
 
     @FindBy (xpath = "//select[@name='accounts']")
     public WebElement accountDropdown;
@@ -70,6 +76,19 @@ public class GMIBankPage {
 
     @FindBy (xpath = "//tbody")
     public WebElement tBodyTumu;
+
+    @FindBy (id = "jh-create-entity")
+    public  WebElement createNewCustomer;
+
+    @FindBy (id ="search-ssn")
+    public  WebElement searcSSN;
+
+    @FindBy (xpath = "//button[.='Search']")
+    public  WebElement searchButton;
+
+
+    @FindBy(xpath = "//div[@class='Toastify__toast-body']")
+    public WebElement failMessage;
 
 
     public void GMIBankLogin(){
