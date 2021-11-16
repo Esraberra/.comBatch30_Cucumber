@@ -26,8 +26,9 @@ public class US_3001_StepDefinitions {
     }
 
     @Given("{string} girer")
-    public void girer(String password) {
+    public void girer(String password) throws InterruptedException {
         us_3001_page.passwordKutusu.sendKeys(password);
+        Thread.sleep(3000);
     }
 
     @Then("gmibank Password strength red görünür")
@@ -35,5 +36,29 @@ public class US_3001_StepDefinitions {
 
         Assert.assertTrue(us_3001_page.red.isDisplayed());
 
+    }
+
+    @Then("gmibank Password strength orange görünür")
+    public void gmibankPasswordStrengthOrangeGörünür() {
+
+        Assert.assertTrue(us_3001_page.orange.isDisplayed());
+    }
+
+    @Then("gmibank Password strength yellow görünür")
+    public void gmibankPasswordStrengthYellowGörünür() {
+
+        Assert.assertTrue(us_3001_page.yellow.isDisplayed());
+    }
+
+    @Then("gmibank Password strength lightgreen görünür")
+    public void gmibankPasswordStrengthLightgreenGörünür() {
+
+        Assert.assertTrue(us_3001_page.lightgreen.isDisplayed());
+    }
+
+    @Then("gmibank Password strength green görünür")
+    public void gmibankPasswordStrengthGreenGörünür() {
+
+        Assert.assertTrue(us_3001_page.green.isDisplayed());
     }
 }
