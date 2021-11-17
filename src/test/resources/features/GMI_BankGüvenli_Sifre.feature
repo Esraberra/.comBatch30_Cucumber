@@ -50,4 +50,4 @@ Feature: GMI BANK GÜVENLI SIFRE
     Examples:
       |passwordGreen|
       | 1Aa+A!a|
-      |    1Bl+B!b|
+      |    1Bl+|
