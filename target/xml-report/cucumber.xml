@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.147">
-    <testcase classname="US1012 Kullanici Concort Hotel database'ini test eder" name="TC18 Concort Hotel Database Read Test" time="2.758">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="2.36">
+    <testcase classname="US1013 Kullanici DBUtil ile Concort Hotel database'ini test eder" name="Kullanici tHOTEL tablosundan istedigi Emaili update eder" time="1.913">
+        <failure message="" type="java.lang.NullPointerException">
             <![CDATA[Given kullanici CHQA database'ine baglanir..................................passed
-And kullanici "tHOTELROOM" tablosundaki "Price" verilerini alir.............passed
-And kullanici "Price" sutunundaki verileri okur ve istedigi islemleri yapar.passed
+Then DBU IDHotel degeri 1016 olan kaydin Email degerini "elveda@gmail.com" yapar.failed
+
+StackTrace:
+java.lang.NullPointerException
+	at utilities.DBUtils.executeQuery(DBUtils.java:36)
+	at dbStepDefinitons.DbUtiStepDefinitions.dbuIDHotelDegeriOlanKaydinEmailDegeriniYapar(DbUtiStepDefinitions.java:53)
+	at ✽.DBU IDHotel degeri 1016 olan kaydin Email degerini "elveda@gmail.com" yapar(file:///Users/esrakucuk/eclipse-workspace/batch30-Cucumber/src/test/resources/features/US1013_DbUtiTestler.feature:13)
 ]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

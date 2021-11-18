@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-11-17T21:17:53.862Z",
-        "line": 3,
-        "name": "TC18 Concort Hotel Database Read Test",
+        "start_timestamp": "2021-11-18T22:30:07.063Z",
+        "line": 10,
+        "name": "Kullanici tHOTEL tablosundan istedigi Emaili update eder",
         "description": "",
-        "id": "us1012-kullanici-concort-hotel-database-ini-test-eder;tc18-concort-hotel-database-read-test",
+        "id": "us1013-kullanici-dbutil-ile-concort-hotel-database-ini-test-eder;kullanici-thotel-tablosundan-istedigi-emaili-update-eder",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 1555655000,
+              "duration": 1780355000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 12,
             "name": "kullanici CHQA database\u0027ine baglanir",
             "match": {
               "location": "dbStepDefinitons.DbStepDefinition.kullanici_chqa_database_ine_baglanir()"
@@ -25,57 +25,40 @@
           },
           {
             "result": {
-              "duration": 251407000,
-              "status": "passed"
+              "error_message": "java.lang.NullPointerException\n\tat utilities.DBUtils.executeQuery(DBUtils.java:36)\n\tat dbStepDefinitons.DbUtiStepDefinitions.dbuIDHotelDegeriOlanKaydinEmailDegeriniYapar(DbUtiStepDefinitions.java:53)\n\tat ✽.DBU IDHotel degeri 1016 olan kaydin Email degerini \"elveda@gmail.com\" yapar(file:///Users/esrakucuk/eclipse-workspace/batch30-Cucumber/src/test/resources/features/US1013_DbUtiTestler.feature:13)\n",
+              "duration": 19451000,
+              "status": "failed"
             },
-            "line": 6,
-            "name": "kullanici \"tHOTELROOM\" tablosundaki \"Price\" verilerini alir",
+            "line": 13,
+            "name": "DBU IDHotel degeri 1016 olan kaydin Email degerini \"elveda@gmail.com\" yapar",
             "match": {
               "arguments": [
                 {
-                  "val": "\"tHOTELROOM\"",
-                  "offset": 10
+                  "val": "1016",
+                  "offset": 19
                 },
                 {
-                  "val": "\"Price\"",
-                  "offset": 36
+                  "val": "\"elveda@gmail.com\"",
+                  "offset": 51
                 }
               ],
-              "location": "dbStepDefinitons.DbStepDefinition.kullanici_tablosundaki_verilerini_alir(java.lang.String,java.lang.String)"
+              "location": "dbStepDefinitons.DbUtiStepDefinitions.dbuIDHotelDegeriOlanKaydinEmailDegeriniYapar(int,java.lang.String)"
             },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 876081000,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "kullanici \"Price\" sutunundaki verileri okur ve istedigi islemleri yapar",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Price\"",
-                  "offset": 10
-                }
-              ],
-              "location": "dbStepDefinitons.DbStepDefinition.kullanici_sutunundaki_verileri_okur_ve_istedigi_islemleri_yapar(java.lang.String)"
-            },
-            "keyword": "And "
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@db"
+            "name": "@dbupdate"
           }
         ]
       }
     ],
-    "name": "US1012 Kullanici Concort Hotel database\u0027ini test eder",
+    "name": "US1013 Kullanici DBUtil ile Concort Hotel database\u0027ini test eder",
     "description": "",
-    "id": "us1012-kullanici-concort-hotel-database-ini-test-eder",
+    "id": "us1013-kullanici-dbutil-ile-concort-hotel-database-ini-test-eder",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US1012_DbRead.feature",
+    "uri": "file:src/test/resources/features/US1013_DbUtiTestler.feature",
     "tags": []
   }
 ]
